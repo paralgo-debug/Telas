@@ -39,7 +39,7 @@ svg.i{width:1.4em;height:1.4em;fill:none;stroke:currentColor;stroke-width:1.8;st
 .burger[aria-expanded=true] span:after{top:0;transform:rotate(-45deg)}
 /* hero */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;color:#fff;background:var(--navy);overflow:hidden}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,26,58,.94) 30%,rgba(6,26,58,.55) 70%,rgba(6,26,58,.25))}
+.hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,26,58,.96) 35%,rgba(6,26,58,.82) 70%,rgba(6,26,58,.6))}
 .hero .wrap{position:relative}
 .hero h1{color:#fff;max-width:14ch}
 .hero p{max-width:50ch;font-size:1.2rem;margin:1.2em 0 2em;color:#e3ecf8}
@@ -129,7 +129,7 @@ section{padding:64px 0}
 .strip ul{grid-template-columns:1fr}.strip li{border:0;border-top:1px solid #1d3560;padding:18px 20px}
 .about,.contact{grid-template-columns:1fr;gap:32px}.about img{aspect-ratio:4/3}
 .fgrid{grid-template-columns:1fr 1fr}
-.hero:before{background:rgba(6,26,58,.82)}
+.hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,26,58,.96) 35%,rgba(6,26,58,.82) 70%,rgba(6,26,58,.6))}
 }
 @media(max-width:520px){.fgrid{grid-template-columns:1fr}.cta-row .btn{width:100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -167,3 +167,11 @@ details[open] p{animation:drop .35s both}
 .js .rv-l{transform:translateX(-50px)}.js .rv-r{transform:translateX(50px)}.js .rv-z{transform:scale(.92)}
 .js .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}}
+
+.hero h1,.hero p{text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.hero .wrap{z-index:1}
+.card{padding:36px 24px 28px;align-items:center;text-align:center;gap:6px}
+.card .ico{width:88px;height:88px;display:grid;place-items:center;border-radius:50%;background:var(--mist);color:var(--vivid);margin-bottom:12px;transition:background .3s,color .3s,transform .4s}
+.card .ico svg{width:46px;height:46px;stroke-width:1.5}
+.card:hover .ico{background:var(--royal);color:#fff;transform:scale(1.08) rotate(-6deg)}
+.card .btn{align-self:center}
